@@ -1,0 +1,27 @@
+# Environment Variables
+.env
+.env.*
+
+# Specified user ignores
+dow.ipynb
+test.py
+
+# Virtual Environments
+venv/
+env/
+.venv/
+Scripts/
+
+# Databases / Caches
+chroma_data/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+.gemini/
