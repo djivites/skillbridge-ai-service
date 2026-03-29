@@ -53,6 +53,20 @@ async def health_check():
     
     return {"status": "unhealthy", "database": "disconnected"}
 
+@app.post("/reset-db", tags=["System"])
+async def reset_database():
+    """
+    Clears all nodes and relationships from the Neo4j graph.
+    USE WITH CAUTION.
+    """
+    try:
+        # We can use any client that has a db reference
+        similarity_service.db.clear_database()
+        return {"message": "Neo4j Database cleared successfully."}
+    except Exception as e:
+        logger.error(f"Failed to clear database: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @app.post("/create-job", tags=["Jobs"])
 async def create_job(request: JobCreateRequest):
     """

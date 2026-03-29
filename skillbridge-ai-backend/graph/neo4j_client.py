@@ -49,3 +49,13 @@ class Neo4jClient:
             self._driver.close()
             self._driver = None
             print("🔌 Neo4j connection closed")
+
+    def clear_database(self):
+        """
+        Deletes all nodes and relationships in the database.
+        USE WITH CAUTION.
+        """
+        query = "MATCH (n) DETACH DELETE n"
+        with self.driver.session() as session:
+            session.run(query)
+            print("🗑️ Neo4j Database cleared successfully")
