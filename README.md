@@ -141,12 +141,20 @@ SkillBridge AI operates using a **Decentralized Multi-Agent Model**:
 
 ## 🔗 Backend Integration
 
-This service acts as the **AI brain** for the [Node.js Backend](../skillbridge-ai-backend). The Node.js server communicates with this FastAPI service via HTTP requests to handle heavy-duty AI computations.
+This service acts as the **AI brain** for the [Node.js Backend](https://github.com/Rahul-8283/skillbridge-ai-backend). The Node.js server communicates with this FastAPI service via HTTP requests to handle heavy-duty AI computations.
 
 **Example Matching Flow:**
 1. Node.js receives Resume PDF -> Forwards to FastAPI `/match-jobs`.
 2. FastAPI returns `matchScore` and `missingSkills`.
 3. Node.js persists results to MongoDB and notifies the user.
+
+---
+
+## 🎨 Frontend Integration
+
+The user-facing application is built using React and Tailwind CSS. It communicates with the Node.js backend to display AI-generated insights, job matches, and career roadmaps.
+
+**Repository:** [SkillBridge AI Frontend](https://github.com/Rahul-8283/skillbridge-ai-frontend)
 
 ---
 
