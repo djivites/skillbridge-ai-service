@@ -1,4 +1,4 @@
-# 🚀 SkillBridge AI
+# 🚀 SkillBridge AI - Service
 ### *Bridging the Gap Between Talent and Industry with Autonomous Multi-Agent Workflows.*
 
 ---
