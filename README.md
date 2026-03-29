@@ -1,6 +1,37 @@
 # 🚀 SkillBridge AI
 ### *Bridging the Gap Between Talent and Industry with Autonomous Multi-Agent Workflows.*
 
+---
+
+## 🛠️ Technology Stack
+
+### **Frontend**
+![React](https://img.shields.io/badge/React-Latest-blue?logo=react) 
+![Vite](https://img.shields.io/badge/Vite-Latest-brightgreen?logo=vite) 
+![Zustand](https://img.shields.io/badge/Zustand-State%20Management-brown?logo=javascript) 
+![Axios](https://img.shields.io/badge/Axios-HTTP%20Client-purple?logo=axios)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Styling-06B6D4?logo=tailwindcss)
+![Deployment](https://img.shields.io/badge/Deployment-Vercel-000000?logo=vercel)
+
+### **Backend**
+![Node.js](https://img.shields.io/badge/Node.js-Latest-339933?logo=node.js) 
+![Express](https://img.shields.io/badge/Express-Web%20Framework-000000?logo=express) 
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb) 
+![Mongoose](https://img.shields.io/badge/Mongoose-ODM-880000?logo=mongoose)
+![Redis](https://img.shields.io/badge/Redis-Cache-DC382D?logo=redis)
+![JWT](https://img.shields.io/badge/JWT-Authentication-000000?logo=auth0)
+![Multer](https://img.shields.io/badge/Multer-File%20Upload-FF6B6B?logo=npm)
+![Deployment](https://img.shields.io/badge/Deployment-Render-46E3B7?logo=render)
+
+### **AI Service**
+![Python](https://img.shields.io/badge/Python-3.10+-3776ab?logo=python) 
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi) 
+![Neo4j](https://img.shields.io/badge/Neo4j-Knowledge%20Graph-0081C2?logo=neo4j)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20Storage-FFF000?logo=pinecone)
+![LLMs](https://img.shields.io/badge/LLMs-Gemini%20%2F%20Groq-4285F4?logo=google)
+
+---
+
 SkillBridge AI is a state-of-the-art multi-agent system designed to revolutionize career guidance and recruitment. It autonomously handles the entire lifecycle of professional growth—from analyzing complex resumes to generating personalized, time-sensitive learning roadmaps to bridge real-world skill gaps.
 
 ---
