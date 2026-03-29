@@ -70,7 +70,6 @@ The entire process is a **Zero-Manual-Intervention** loop:
 * **Framework:** FastAPI (High-performance Python backend)
 * **Knowledge Graph:** Neo4j (Graph Database)
 * **Orchestration / LLMs:** Gemini API (Primary) / Groq (High-speed inference)
-* **Local Intelligence:** Ollama (LLaMA) for private data processing
 * **Vector Memory:** ChromaDB (for RAG resource caching)
 * **Language:** Python 3.10+
 
