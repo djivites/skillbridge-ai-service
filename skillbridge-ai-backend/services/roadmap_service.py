@@ -76,11 +76,15 @@ def generate_personalized_roadmap(user_id: str, job_id: str, hours_per_day: floa
         summary = skill_data.get("precomputed_summary")
         roadmap_steps = skill_data.get("precomputed_roadmap")
         
-        # Ensure it NEVER falls back to generating dynamically
         if not summary or not roadmap_steps:
-            print(f"⚠️ Precomputed data missing in RAG for {skill}. Returning fallback placeholders instead of generating.")
-            summary = "Summary not available yet. The Job Provider has not fully generated this skill's roadmap."
-            roadmap_steps = ["1. Learn the absolute basics", "2. Review documentation and core concepts", "3. Complete a portfolio project"]
+            print(f"⚠️ Precomputed data missing in RAG for {skill}. Generating dynamically via LLM...")
+            try:
+                summary = generate_summary(skill)
+                roadmap_steps = generate_roadmap(skill)
+            except Exception as e:
+                print(f"Failed to generate summary/roadmap for {skill}: {e}")
+                summary = "Summary not available yet. The Job Provider has not fully generated this skill's roadmap."
+                roadmap_steps = ["1. Learn the absolute basics", "2. Review documentation and core concepts", "3. Complete a portfolio project"]
         else:
             print(f"⚡ Loaded precomputed Summary & Roadmap instantly from cache for {skill}!")
         

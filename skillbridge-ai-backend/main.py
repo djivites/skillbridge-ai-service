@@ -271,6 +271,24 @@ async def generate_roadmap_endpoint(request: RoadmapRequest):
             detail=f"An error occurred while generating roadmap: {str(e)}"
         )
 
+@app.get("/match-candidates/{job_id}", tags=["Matching"])
+async def match_candidates(job_id: str, threshold: float = 0.0):
+    """
+    Rank all available users for a specific job based on their skill graph.
+    """
+    try:
+        matches = similarity_service.rank_users_for_job(job_id, threshold=threshold)
+        return {
+            "job_id": job_id,
+            "matches": matches
+        }
+    except Exception as e:
+        logger.error(f"Error processing candidate matching for job {job_id}: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"An error occurred while processing the request: {str(e)}"
+        )
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
